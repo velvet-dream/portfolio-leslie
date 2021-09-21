@@ -1,0 +1,35 @@
+body {
+	background-color: #fefce8;
+	min-height: 100vh;
+}
+
+main {
+	box-sizing: border-box;
+	background: url("../graphics/shape-jou-05-m100.png") 2% 0% / 10em repeat-y,
+				url("../graphics/shape-jou-05-m50.png") 18% 10% / 8em repeat-y,
+				url("../graphics/shape-jou-05-m50.png") 35% 32% / 10em repeat-y;
+	background-repeat: repeat-y;
+	min-height: calc(100vh - (var(--nlh) + var(--flh) + 2px + .6em ));
+}
+
+article {
+	display: flex;
+	flex-flow: row wrap;
+	height: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+	article .img-display {
+		height: 100%;
+		max-width: 45%;
+		/*min-width: 20em;*/
+	}
+
+	article .img-display img {
+		width: 100%;
+	}
+
+	article .text {
+		max-width: 40%;
+	}

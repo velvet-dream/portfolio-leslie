@@ -1,0 +1,18 @@
+/*
+ *	LAYOUT : DISPLAY - EXPERIMENTER
+ */
+
+
+.card {
+	margin: 2em auto;
+}
+
+	.card .arrow {
+		margin-bottom: .5rem;
+		margin-top: .5rem;
+	}
+
+	.arrow:before {
+		content: '→ ';
+		margin-left: -1.2rem;
+	}

@@ -1,0 +1,28 @@
+---
+layout: mommy
+title: "Recherche par tag"
+categories: tags
+permalink: /search.html
+---
+
+<div>
+	<p>
+		Cliquez sur un tag pour lancer une recherche d'articles.
+	</p>
+</div>
+
+<div class="tags-container">
+	{% assign list = "" %}
+	{% for post in site.posts %}
+		{% for tag in post.tags %}
+			{% unless list contains tag %}
+				{% assign list = list | append: tag %}
+				<button onclick="chercher('{{ tag }}')">{{ tag }}</button>
+			{% endunless %}
+		{% endfor %}
+	{% endfor %}
+</div>
+
+<div id="articles-container">
+	
+</div>

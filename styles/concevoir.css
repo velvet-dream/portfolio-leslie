@@ -1,0 +1,100 @@
+/*
+ *	LAYOUT : DISPLAY
+ */
+
+body {
+	background-color: #fefce8;
+	/*background: var(--lines);*/
+}
+
+main {
+	/*background: url("../graphics/shape-jou-05-m100.png") 2% center / 10em repeat-y,
+				url("../graphics/shape-jou-05-m50.png") 20% 10% repeat-y;
+	background-repeat: repeat-y;*/
+	background:/* url('/graphics/visuel-1_m50.png') 10% / 20% repeat-y,*/
+	url('/graphics/shape-exp-07_m50.png') 37% / 85px repeat-y,
+	url('/graphics/shape-exp-17_m25.png') 28% repeat-y;
+}
+
+.col-1 {
+	display: grid;
+	grid-template-columns: auto;
+	width: 100%;
+}
+
+	.col-1 .card {
+		display: inline-grid;
+		grid-template-columns: 33% auto;
+	}
+
+	.col-1 .img-container {
+		aspect-ratio:  1 / 1;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.col-1 img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+.card {
+	position: relative;
+	transition: all 0.4s ease;
+	margin: 1.5em;
+	--lh: 1.2rem;
+  	line-height: var(--lh);
+}
+	.card .cartel {
+		box-sizing: border-box;
+		background-color: #fffc;
+		padding: 1.5em;
+		overflow: hidden;
+	}
+
+		.cartel h3 {
+			margin-bottom: 0;
+		}
+
+		.cartel .text-content p {
+			--max-lines: 5;
+			max-height: calc(var(--lh) * var(--max-lines));
+ 	 		overflow: hidden;
+		}
+
+/* CAROUSEL */
+
+.carousel { position: relative; }
+
+.img-fader {
+	width: 100%;
+	height: 100%;
+	transition: transform 400ms ease-out;
+}
+
+.controler {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-flow: column wrap;
+	bottom: 0;
+	height: 100%;
+	text-align: center;
+}
+
+.controler .dot {
+	transition: background-color 0.4s;
+	font-family: monospace;
+	width: 15px;
+	height: 15px;
+	margin: 5px;
+	border-radius: 50%;
+	background-color: hotpink;
+	cursor: pointer;
+}
+
+.controler .active, .dot:hover {
+	background-color: deeppink;
+}

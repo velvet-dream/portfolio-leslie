@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{{ site.title }}</title>
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/font-faces.css">
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/general-style.css">
+	{% case page.layout %}
+		{% when "home" %}
+			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/home.css">
+		{% when "display" %}
+			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/{{ page.categories }}.css">
+		{% when "post" %}
+			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/article.css">
+	{% endcase %}
+		
+</head>
+<body>
+	{% include navbar.html %}
+	<main>
+		{{ content }}
+	</main>
+	{% include footer.html %}
+	{% if page.categories contains "tag" %}
+		{% include searchscript.html %}
+	{% endif %}
+	<script type="text/javascript" src="{{ site.url }}/scripts/carousel-test.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+---
+layout: mommy
+---
+
+<article>
+	<div class="img-display"> <img src="{{ site.url }}/img/{{ page.img[0] }}" ></div>
+	<div class="text">
+		<h2>{{ page.title }}</h2>
+		{{ content }}
+		<div class="links">
+			{% for tag in page.tags %}
+				<a href="{{ site.baseurl }}/search?src={{ tag }}" target="_blank">#{{ tag }}</a>
+			{% endfor %}
+		</div>
+	</div>
+</article>

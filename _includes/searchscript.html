@@ -1,0 +1,37 @@
+<script type="text/javascript">
+	var container = document.getElementById('articles-container');
+	var ref = [];
+	function Entry(title, date, categories, url, tags) {
+		this.title = title;
+		this.date = date;
+		this.categories = categories;
+		this.url = url;
+		this.tags = tags.split('|');
+	}
+
+	{% for post in site.posts %}
+		ref.push( new Entry( "{{ post.title }}", "{{ post.date | date: '%d&middot%m&middot%Y' }}", "{{ post.categories }}", "{{ post.url }}", '{{ post.tags | join: "|" }}') );
+	{% endfor %}
+
+	var urlParams = new URLSearchParams(decodeURI(window.location.search));
+	let srcValue = urlParams.get("src");
+
+	if (srcValue) chercher(srcValue);
+
+	function chercher(tag){
+		console.log("- Début de la recherche…");
+		let counter = 0;
+		container.innerHTML = "";
+		for (let x of ref) {
+			if ( x.tags.includes(tag) ) {
+				let str = "<div class='card'>";
+				str += "<a href='" + x.url + "'><h2>" + x.title + "</h2></a>";
+				str += "<p>Le : " + x.date + "</p></div>";
+				container.innerHTML += str;
+				console.log("Article trouvé : " + x.title.toUpperCase() + " avec les tags : " + x.tags.join(", "));
+				counter++;
+			}
+		}
+		console.log("- Fin de la recherche. " + counter + " éléments trouvés.")
+	}
+</script>

@@ -1,0 +1,95 @@
+/*
+ *
+ * ███████╗ █████╗ ██╗   ██╗███╗   ██╗███████╗
+ * ██╔════╝██╔══██╗██║   ██║████╗  ██║██╔════╝
+ * █████╗  ███████║██║   ██║██╔██╗ ██║█████╗  
+ * ██╔══╝  ██╔══██║██║   ██║██║╚██╗██║██╔══╝  
+ * ██║     ██║  ██║╚██████╔╝██║ ╚████║███████╗
+ * ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+ */                                         
+
+@font-face {
+    font-family: 'Faune';
+    src:    url('fonts/faune/woff/Faune-Display_Black.woff') format('woff'),
+            url('fonts/faune/woff2/Faune-Display_Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Faune';
+    src:    url('fonts/faune/woff/Faune-Display_Bold_Italic.woff') format('woff'),
+            url('fonts/faune/woff2/Faune-Display_Bold_Italic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Faune';
+    src:    url('fonts/faune/woff/Faune-Display_Thin.woff') format('woff'),
+            url('fonts/faune/woff2/Faune-Display_Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Faune';
+    src:    url('fonts/faune/woff/Faune-Text_Bold.woff') format('woff'),
+            url('fonts/faune/woff2/Faune-Text_Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Faune';
+    src:    url('fonts/faune/woff/Faune-Text_Italic.woff') format('woff'),
+            url('fonts/faune/woff2/Faune-Text_Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Faune';
+    src:    url('fonts/faune/woff/Faune-Text_Regular.woff') format('woff'),
+            url('fonts/faune/woff2/Faune-Text_Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+ *
+ * ███╗   ███╗ ██████╗ ███╗   ██╗████████╗███████╗███████╗██████╗ ██████╗  █████╗ ████████╗
+ * ████╗ ████║██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝██╔════╝██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝
+ * ██╔████╔██║██║   ██║██╔██╗ ██║   ██║   ███████╗█████╗  ██████╔╝██████╔╝███████║   ██║   
+ * ██║╚██╔╝██║██║   ██║██║╚██╗██║   ██║   ╚════██║██╔══╝  ██╔══██╗██╔══██╗██╔══██║   ██║   
+ * ██║ ╚═╝ ██║╚██████╔╝██║ ╚████║   ██║   ███████║███████╗██║  ██║██║  ██║██║  ██║   ██║   
+ * ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
+ */
+
+@font-face {
+    font-family: 'Montserrat';
+    src:    url('fonts/montserrat/Montserrat-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src:    url('fonts/montserrat/Montserrat-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src:    url('fonts/montserrat/Montserrat-Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src:    url('fonts/montserrat/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

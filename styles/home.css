@@ -1,0 +1,70 @@
+.domme {
+	display: grid;
+	grid-template-columns: 20em 20em;
+	grid-template-rows: 100pt 15em 15em 15em;
+	grid-column-gap: 2em;
+	grid-row-gap: 4em;
+	padding: 20pt 50pt;
+	justify-content: space-evenly;
+}
+
+.bratty-sub {
+	grid-column: 1 / span 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.subby {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.subby p {
+	text-align: left;
+	width: 100%;
+}
+
+#play { background-image: url('/graphics/visuel-3.png'); }
+
+#play:hover { filter: drop-shadow(-15px 0px 2px var(--yellow)); }
+
+#concept { background-image: url("/graphics/visuel-1.png"); }
+
+#concept:hover { filter: drop-shadow(0 0 .8em var(--red)); }
+
+#experiment { background-image: url("/graphics/visuel-2.png"); }
+
+#experiment:hover { filter: drop-shadow(12px 5px 2px var(--blue)); }
+
+.domme .category {
+	position: relative;
+	align-items: flex-end;
+	justify-content: right;
+}
+
+.category .myImage {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: filter .6s ease;
+}
+
+	.category h2 {
+		z-index: 2;
+	}
+	
+	a.category {
+		color: inherit;
+		text-decoration: none;
+		font-style: italic;
+	}
+
+	a.category:hover {
+		text-decoration: underline;
+	}

@@ -1,0 +1,107 @@
+---
+layout: mommy
+---
+
+<div class="grid-container {{ page.grid-type }}">
+	{% for post in site.posts %}
+		{% if post.categories contains page.categories %}
+			<div class="grid-element card">
+				{% unless page.categories contains "experimenter" %}
+				{% if post.img.size > 1 %}
+					<div class="img-container carousel" data-index="0">
+						{% for image in post.img %}
+							<div class="img-fader">
+								<img src="{{ site.url }}/img/{{ image }}" alt="image de présentation">
+							</div>
+						{% endfor %}
+						<div class="controler">
+							{% for image in post.img %}
+								{% if forloop.first == true %}
+									<div class="dot active" onclick="dotClick(0, this);"></div>
+								{% else %}
+									<div class="dot" onclick="dotClick({{ forloop.index0 }}, this);"></div>
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+				{% elsif post.img.size == 1 %}
+					<div class="img-container">
+						<div class="img-fader">
+							<img src="{{ site.url }}/img/{{ post.img[0] }}" alt="image de présentation">
+						</div>
+					</div>
+				{% else %}
+					<div class="img-container">
+						<div class="img-fader">
+							<img src="{{ site.url }}/img/img (1).jpg" alt="image de présentation">
+						</div>
+					</div>
+				{% endif %}
+				{% endunless %}
+				<div class="cartel {{ page.categories }}">
+					{% case page.categories %}
+
+						{% when 'experimenter' %}
+
+							<p class="arrow"><a href="{{ post.url }}" target="_blank">{{ post.title }}</a>,
+							<span>{{ post.date | date: '%d' }} {% assign m = post.date | date: "%-m" %}{% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %} {{ post.date | date: '%Y' }}</span>
+							<!-- <div class="text-content">
+								<p>{{ post.description }}</p>	
+							</div> -->
+							<div class="links">
+								{% for tag in post.tags %}
+									<a href="{{ site.baseurl }}/search?src={{ tag }}" target="_blank">#{{ tag }}</a>
+								{% endfor %}
+							</div>
+
+						{% when 'concevoir' %}
+
+							<h3><a href="{{ post.url }}" target="_blank">{{ post.title }}</a></h3>
+								<div class="infos">
+									{% if post.where %}
+										<p>À : {{ post.where }}</p>
+									{% endif %}
+									{% if post.who %}
+										<p>Avec : {{ post.who }}</p>
+									{% endif %}
+								</div>
+							<div class="text-content">
+								<p>{{ post.description }}</p>
+								{% if post.enddate %}
+									<span>Du {{ post.date | date: '%d&middot%m&middot%Y' }} au {{ post.enddate | date: '%d&middot%m&middot%Y' }}</span>
+								{% else %}
+									<span>{{ post.date | date: '%d&middot%m&middot%Y' }}</span>
+								{% endif %}
+							</div>
+							<div class="links">
+								<a href="{{ post.url }}" target="_blank">Lire l'article</a>
+								{% for tag in post.tags %}
+									<a href="{{ site.baseurl }}/search?src={{ tag }}" target="_blank">#{{ tag }}</a>
+								{% endfor %}
+							</div>
+
+						{% when 'jouer' %}
+
+							<h3><a href="{{ post.url }}" target="_blank">{{ post.title }}</a></h3>
+							<div class="text-content">
+								<p>{{ post.description }}</p>
+								{% if post.who %}
+									<div class="infos">
+										<p>Avec : {{ post.who }}</p>
+									</div>
+								{% endif %}
+								<span>{{ post.date | date: '%d&middot%m&middot%Y' }}</span>
+							</div>
+							<div class="links">
+								{% for tag in post.tags %}
+									<a href="{{ site.baseurl }}/search?src={{ tag }}" target="_blank">#{{ tag }}</a>
+								{% endfor %}
+							</div>
+					{% endcase %}
+							
+					
+				</div>
+			</div>
+		{% endif %}
+	{% endfor %}
+</div>
