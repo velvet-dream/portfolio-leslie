@@ -31,7 +31,7 @@ github_username:  jekyll
 
 collections:
   posts:
-    permalink: :path/:categories/:title.html
+    permalink: /:categories/:title.html
 
 # Build settings
 # theme: minima
