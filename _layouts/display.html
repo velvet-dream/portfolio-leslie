@@ -43,7 +43,7 @@ layout: mommy
 
 						{% when 'experimenter' %}
 
-							<p class="arrow"><a href="{{ site.baseurl }}/{{ post.url }}" target="_blank">{{ post.title }}</a>,
+							<p class="arrow"><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a>,
 							<span>{{ post.date | date: '%d' }} {% assign m = post.date | date: "%-m" %}{% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %} {{ post.date | date: '%Y' }}</span>
 							<!-- <div class="text-content">
 								<p>{{ post.description }}</p>	
@@ -56,7 +56,7 @@ layout: mommy
 
 						{% when 'concevoir' %}
 
-							<h3><a href="{{ site.baseurl }}/{{ post.url }}" target="_blank">{{ post.title }}</a></h3>
+							<h3><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a></h3>
 								<div class="infos">
 									{% if post.where %}
 										<p>À : {{ post.where }}</p>
@@ -74,7 +74,7 @@ layout: mommy
 								{% endif %}
 							</div>
 							<div class="links">
-								<a href="{{ site.baseurl }}/{{ post.url }}" target="_blank">Lire l'article</a>
+								<a href="{{ site.baseurl }}{{ post.url }}" target="_blank">Lire l'article</a>
 								{% for tag in post.tags %}
 									<a href="{{ site.baseurl }}/search?src={{ tag }}" target="_blank">#{{ tag }}</a>
 								{% endfor %}
@@ -82,7 +82,7 @@ layout: mommy
 
 						{% when 'jouer' %}
 
-							<h3><a href="{{ site.baseurl }}/{{ post.url }}" target="_blank">{{ post.title }}</a></h3>
+							<h3><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a></h3>
 							<div class="text-content">
 								<p>{{ post.description }}</p>
 								{% if post.who %}
