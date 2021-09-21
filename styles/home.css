@@ -26,15 +26,15 @@
 	width: 100%;
 }
 
-#play { background-image: url('/graphics/visuel-3.png'); }
+#play { background-image: url('../graphics/visuel-3.png'); }
 
 #play:hover { filter: drop-shadow(-15px 0px 2px var(--yellow)); }
 
-#concept { background-image: url("/graphics/visuel-1.png"); }
+#concept { background-image: url("../graphics/visuel-1.png"); }
 
 #concept:hover { filter: drop-shadow(0 0 .8em var(--red)); }
 
-#experiment { background-image: url("/graphics/visuel-2.png"); }
+#experiment { background-image: url("../graphics/visuel-2.png"); }
 
 #experiment:hover { filter: drop-shadow(12px 5px 2px var(--blue)); }
 

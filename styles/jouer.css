@@ -11,7 +11,7 @@ main {
 	/*background: url("../graphics/shape-jou-05-m100.png") 2% center / 10em repeat-y,
 				url("../graphics/shape-jou-05-m50.png") 20% 10% repeat-y;
 	background-repeat: repeat-y;*/
-	background: url('/graphics/visuel-3_m50.png') top center repeat-y;
+	background: url('../graphics/visuel-3_m50.png') top center repeat-y;
 }
 
 .col-2 {

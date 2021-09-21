@@ -11,7 +11,7 @@ layout: mommy
 					<div class="img-container carousel" data-index="0">
 						{% for image in post.img %}
 							<div class="img-fader">
-								<img src="{{ site.url }}/img/{{ image }}" alt="image de présentation">
+								<img src="{{ site.baseurl }}/img/{{ image }}" alt="image de présentation">
 							</div>
 						{% endfor %}
 						<div class="controler">
@@ -27,13 +27,13 @@ layout: mommy
 				{% elsif post.img.size == 1 %}
 					<div class="img-container">
 						<div class="img-fader">
-							<img src="{{ site.url }}/img/{{ post.img[0] }}" alt="image de présentation">
+							<img src="{{ site.baseurl }}/img/{{ post.img[0] }}" alt="image de présentation">
 						</div>
 					</div>
 				{% else %}
 					<div class="img-container">
 						<div class="img-fader">
-							<img src="{{ site.url }}/img/img (1).jpg" alt="image de présentation">
+							<img src="{{ site.baseurl }}/img/img (1).jpg" alt="image de présentation">
 						</div>
 					</div>
 				{% endif %}

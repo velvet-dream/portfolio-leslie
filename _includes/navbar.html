@@ -1,24 +1,24 @@
 <nav>
 	<div class="nav-elem">
-		<a href="{{ site.url }}">Leslie Astier</a>
+		<a href="{{ site.baseurl }}">Leslie Astier</a>
 	</div>
 	<div class="nav-elem">
 		{% case page.layout %}
 			{% when "display" %}
 				<h1>{{ page.title }}</h1>
 			{% when "post" %}
-				<h1><a href="{{ site.url }}/{{ page.categories[0] }}">{{ page.categories[0] | capitalize }}</a></h1>
+				<h1><a href="{{ site.baseurl }}/{{ page.categories[0] }}">{{ page.categories[0] | capitalize }}</a></h1>
 		{% endcase %}
 	</div>
 	<div class="nav-elem cat-nav">
 		{% if page.layout == "display" %}
-			{% unless page.categories contains "concevoir" %}<a href="{{ site.url }}/concevoir">Concevoir</a>{% endunless %}
-			{% unless page.categories contains "experimenter" %}<a href="{{ site.url }}/experimenter">Expérimenter</a>{% endunless %}
-			{% unless page.categories contains "jouer" %}<a href="{{ site.url }}/jouer">Jouer</a>{% endunless %}	
+			{% unless page.categories contains "concevoir" %}<a href="{{ site.baseurl }}/concevoir">Concevoir</a>{% endunless %}
+			{% unless page.categories contains "experimenter" %}<a href="{{ site.baseurl }}/experimenter">Expérimenter</a>{% endunless %}
+			{% unless page.categories contains "jouer" %}<a href="{{ site.baseurl }}/jouer">Jouer</a>{% endunless %}	
 		{% elsif page.layout == "post" %}
-			{% unless page.categories[0] == "concevoir" %}<a href="{{ site.url }}/concevoir">Concevoir</a>{% endunless %}
-			{% unless page.categories[0] == "experimenter" %}<a href="{{ site.url }}/experimenter">Expérimenter</a>{% endunless %}
-			{% unless page.categories[0] == "jouer" %}<a href="{{ site.url }}/jouer">Jouer</a>{% endunless %}
+			{% unless page.categories[0] == "concevoir" %}<a href="{{ site.baseurl }}/concevoir">Concevoir</a>{% endunless %}
+			{% unless page.categories[0] == "experimenter" %}<a href="{{ site.baseurl }}/experimenter">Expérimenter</a>{% endunless %}
+			{% unless page.categories[0] == "jouer" %}<a href="{{ site.baseurl }}/jouer">Jouer</a>{% endunless %}
 		{% endif %}
 	</div>
 </nav>
