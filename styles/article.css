@@ -4,6 +4,7 @@ body {
 }
 
 main {
+	/*padding: 2em 10em;*/
 	box-sizing: border-box;
 	background: url("../graphics/shape-jou-05-m100.png") 2% 0% / 10em repeat-y,
 				url("../graphics/shape-jou-05-m50.png") 18% 10% / 8em repeat-y,
@@ -33,3 +34,45 @@ article {
 	article .text {
 		max-width: 40%;
 	}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+	article .img-display {
+			height: 100%;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		article .text {
+			width: 100%;
+			padding: 1em;
+			background-color: #fffb;
+			max-width: 100%;
+		}
+
+	main {
+		padding: 1em;
+	}
+
+}
+
+@media only screen and (min-width: 600px) {
+	main {
+		padding: 1em;
+	}
+
+	article {
+		justify-content: space-around;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+	main {
+		padding: 2em 9em;
+	}
+
+	article {
+		justify-content: space-between;
+	}
+}

@@ -8,6 +8,7 @@ body {
 }
 
 main {
+	padding: 2em 10em;
 	/*background: url("../graphics/shape-jou-05-m100.png") 2% center / 10em repeat-y,
 				url("../graphics/shape-jou-05-m50.png") 20% 10% repeat-y;
 	background-repeat: repeat-y;*/
@@ -97,4 +98,29 @@ main {
 
 .controler .active, .dot:hover {
 	background-color: deeppink;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.col-1 .card {
+		grid-template-columns: auto;
+	}
+
+	main {
+		padding: 0;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+
+	main {
+		padding: 1em;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	main {
+		padding: 2em 5em;
+	}
 }

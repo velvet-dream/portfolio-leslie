@@ -1,10 +1,14 @@
+main {
+	padding-top: 0;
+}
+
 .domme {
 	display: grid;
 	grid-template-columns: 20em 20em;
-	grid-template-rows: 100pt 15em 15em 15em;
+	grid-template-rows: 4em 15em 15em 15em;
 	grid-column-gap: 2em;
-	grid-row-gap: 4em;
-	padding: 20pt 50pt;
+	grid-row-gap: 2em;
+	padding: 2em 4em;
 	justify-content: space-evenly;
 }
 
@@ -68,3 +72,39 @@
 	a.category:hover {
 		text-decoration: underline;
 	}
+
+
+@media only screen and (max-width: 600px) {
+	.domme {
+		grid-template-columns: 35% auto;
+		grid-template-rows: auto auto auto auto;
+		grid-row-gap: .5em;
+		padding: 1em 1.5em;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.domme {
+		grid-template-columns: 15em 15em;
+		grid-row-gap: 1.5em;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.domme {
+		grid-template-columns: 20em 20em;
+		grid-row-gap: 2em;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	
+} 
