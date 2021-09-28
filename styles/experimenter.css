@@ -2,9 +2,31 @@
  *	LAYOUT : DISPLAY - EXPERIMENTER
  */
 
+body {
+	min-height: 100vh;
+}
+
+main {
+	margin: auto;
+	max-width: 40em;
+	padding: 1em 2em;
+	min-height: calc(100vh - (var(--nlh) + var(--flh) + 2px + .6em + 2em ));
+
+	background: url("../graphics/visuel-2.png") 100% 0% / 10em repeat-y;
+}
+
+.arrow a {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.arrow a:hover {
+	text-decoration: underline var(--red) .1em;
+}
+
 
 .card {
-	margin: 2em auto;
+	margin: 1.5em auto;
 }
 
 	.card .arrow {

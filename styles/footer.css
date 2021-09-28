@@ -1,0 +1,10 @@
+body {
+	min-height: 100vh;
+}
+
+main {
+	margin: auto;
+	max-width: 40em;
+	padding: 1em 2em;
+	min-height: calc(100vh - (var(--nlh) + var(--flh) + 2px + .6em + 2em ));
+}

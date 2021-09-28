@@ -3,7 +3,40 @@ layout: mommy
 ---
 
 <article>
-	<div class="img-display"> <img src="{{ site.baseurl }}/img/{{ page.img[0] }}" ></div>
+	{% unless page.categories[0] == "experimenter" %}
+		<div class="img-display">
+		{% if page.img.size > 1 %}
+			<div class="img-container carousel" data-index="0">
+				{% for image in page.img %}
+					<div class="img-fader">
+						<img src="{{ site.baseurl }}/img/{{ image }}" alt="image de présentation">
+					</div>
+				{% endfor %}
+				<div class="controler">
+					{% for image in page.img %}
+						{% if forloop.first == true %}
+							<div class="dot active" onclick="dotClick(0, this);"></div>
+						{% else %}
+							<div class="dot" onclick="dotClick({{ forloop.index0 }}, this);"></div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		{% elsif page.img.size == 1 %}
+			<div class="img-container">
+				<div class="img-fader">
+					<img src="{{ site.baseurl }}/img/{{ page.img[0] }}" alt="image de présentation">
+				</div>
+			</div>
+		{% else %}
+			<div class="img-container">
+				<div class="img-fader">
+					<img src="{{ site.baseurl }}/img/img (1).jpg" alt="image de présentation">
+				</div>
+			</div>
+		{% endif %}
+		</div>
+	{% endunless %}
 	<div class="text">
 		<h2>{{ page.title }}</h2>
 		{{ content }}

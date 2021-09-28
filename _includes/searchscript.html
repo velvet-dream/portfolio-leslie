@@ -26,7 +26,7 @@
 			if ( x.tags.includes(tag) ) {
 				let str = "<div class='card'>";
 				str += "<a href='" + x.url + "'><h2>" + x.title + "</h2></a>";
-				str += "<p>Le : " + x.date + "</p></div>";
+				str += "<span>Le : " + x.date + "</span></div>";
 				container.innerHTML += str;
 				console.log("Article trouvé : " + x.title.toUpperCase() + " avec les tags : " + x.tags.join(", "));
 				counter++;

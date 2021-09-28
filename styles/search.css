@@ -1,0 +1,35 @@
+body {
+	min-height: 100vh;
+}
+
+main {
+	margin: auto;
+	max-width: 40em;
+	padding: 2em;
+	padding-top: 1em;
+	box-sizing: border-box;
+	min-height: calc(100vh - (var(--nlh) + var(--flh) + 2px + .6em ));
+}
+
+button {
+	font: inherit;
+	padding: 0.3em;
+	margin: .2em;
+}
+
+.tags-container {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.card a {
+	text-decoration: none;
+}
+
+.card a h2 {
+	margin-bottom: .1em;
+}
+
+.card a:hover {
+	text-decoration: underline var(--red) .1em;
+}

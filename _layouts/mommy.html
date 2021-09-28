@@ -13,8 +13,20 @@
 		{% when "display" %}
 			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/{{ page.categories }}.css">
 		{% when "post" %}
-			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/article.css">
+			{% unless page.categories[0] == "experimenter" %}
+				<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/article.css">
+			{% else %}
+				<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/post-exp.css">
+			{% endunless %}
 	{% endcase %}
+
+	{% if page.categories contains "footer" %}
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/footer.css">
+	{% endif %}
+
+	{% if page.categories contains "tags" %}
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/search.css">
+	{% endif %}
 		
 </head>
 <body>
@@ -26,6 +38,6 @@
 	{% if page.categories contains "tag" %}
 		{% include searchscript.html %}
 	{% endif %}
-	<script type="text/javascript" src="{{ site.baseurl }}/scripts/carousel-test.js"></script>
+	<script type="text/javascript" src="{{ site.baseurl }}/scripts/carousel.js"></script>
 </body>
 </html>

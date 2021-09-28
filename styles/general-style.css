@@ -27,11 +27,10 @@
 
 html {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 14.4pt;
-	/*background: repeating-linear-gradient(90deg, #fff, rgb(255,255,255) 200px,
-		rgb(191,233,240) 200px, rgb(191,233,240) 201px, rgba(255,255,255,1) 201px);*/
-	/*background-repeat: repeat-x;*/
+	background-color: #fcfbf5;
+	background-image: url('../graphics/100-100-3.png');
 }
+
 
 body { margin: 0; }
 
@@ -69,7 +68,7 @@ nav {
 	}
 
 	nav a:hover {
-		text-decoration: underline;
+		text-decoration: solid underline var(--red);
 	}
 
 	nav .cat-nav a:first-child {
@@ -144,8 +143,44 @@ footer {
 	}
 
 	footer .link-page:hover {
-		text-decoration: underline;
+		text-decoration: solid underline var(--red);
 	}
+
+/* CAROUSEL */
+
+.carousel { position: relative; }
+
+.img-fader {
+	width: 100%;
+	height: 100%;
+	transition: transform 400ms ease-out;
+}
+
+.controler {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-flow: column wrap;
+	bottom: 0;
+	height: 100%;
+	text-align: center;
+}
+
+.controler .dot {
+	transition: background-color 0.4s;
+	font-family: monospace;
+	width: 15px;
+	height: 15px;
+	margin: 5px;
+	border-radius: 50%;
+	background-color: var(--blue);
+	cursor: pointer;
+}
+
+.controler .active, .dot:hover {
+	background-color: var(--red);
+}
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {

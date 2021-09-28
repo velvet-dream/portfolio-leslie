@@ -1,5 +1,15 @@
+body {
+	min-height: 100vh;
+}
+
 main {
 	padding-top: 0;
+	min-height: calc(100vh - (var(--nlh) + var(--flh) + 2px + .6em ));
+}
+
+main .subby p a {
+	text-decoration: solid underline var(--red) .1em;
+	text-decoration-skip: none; /* not supported on most browsers! */
 }
 
 .domme {
@@ -10,6 +20,8 @@ main {
 	grid-row-gap: 2em;
 	padding: 2em 4em;
 	justify-content: space-evenly;
+	max-width: 40em;
+	margin: auto;
 }
 
 .bratty-sub {
@@ -70,7 +82,7 @@ main {
 	}
 
 	a.category:hover {
-		text-decoration: underline;
+		text-decoration: solid underline var(--red) .1em;
 	}
 
 

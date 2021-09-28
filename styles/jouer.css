@@ -1,17 +1,12 @@
 /*
  *	LAYOUT : DISPLAY
  */
-
-body {
-	background-color: #fefce8;
-	/*background: var(--lines);*/
-}
-
+ 
 main {
-	/*background: url("../graphics/shape-jou-05-m100.png") 2% center / 10em repeat-y,
-				url("../graphics/shape-jou-05-m50.png") 20% 10% repeat-y;
-	background-repeat: repeat-y;*/
-	background: url('../graphics/visuel-3_m50.png') top center repeat-y;
+	background: url("../graphics/motif-5-m70-mirrored.png") 5% center repeat-y,
+				url("../graphics/motif-5-m50.png") 12% 10% / 100px repeat-y,
+				url("../graphics/motif-5-m70-mirrored.png") 88% 13% / 100px repeat-y;
+	/*background: url('../graphics/visuel-3_m50.png') top center repeat-y;*/
 }
 
 .col-2 {
@@ -34,7 +29,6 @@ main {
   	line-height: var(--lh);
 }
 	.card .cartel {
-		/*border: 2px solid blue;*/
 		box-sizing: border-box;
 		background-color: #fffb;
 		padding: 1em;
@@ -64,39 +58,4 @@ main {
 	height: 100%;
 	object-fit: cover;
 	object-position: 50% 50%;
-}
-
-/* CAROUSEL */
-
-.carousel { position: relative; }
-
-.img-fader {
-	width: 100%;
-	height: 100%;
-	transition: transform 400ms ease-out;
-}
-
-.controler {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	flex-flow: column wrap;
-	bottom: 0;
-	height: 100%;
-	text-align: center;
-}
-
-.controler .dot {
-	transition: background-color 0.4s;
-	font-family: monospace;
-	width: 15px;
-	height: 15px;
-	margin: 5px;
-	border-radius: 50%;
-	background-color: hotpink;
-	cursor: pointer;
-}
-
-.controler .active, .dot:hover {
-	background-color: deeppink;
 }

@@ -1,0 +1,31 @@
+body {
+	min-height: 100vh;
+}
+
+main {
+	margin: auto;
+	max-width: 40em;
+	padding: 2em;
+	padding-top: 1em;
+	box-sizing: border-box;
+	min-height: calc(100vh - (var(--nlh) + var(--flh) + 2px + .6em ));
+}
+
+article {
+	
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (min-width: 600px) {
+	
+}
+
+
+@media only screen and (min-width: 768px) {
+	
+}
